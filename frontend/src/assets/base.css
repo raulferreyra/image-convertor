@@ -1,0 +1,38 @@
+/* For URAS styles */
+
+:root {
+  --primary-color: #00386C;
+  --primary-color-2: #004289;
+  --primary-color-3: #74b5fc;
+  --primary-color-4: #283d50;
+  --primary-color-5: #556877;
+  --secondary-color: #F58233;
+  --terceaty-color: #bfddfe;
+  --color-silver-1: #c7c5b8;
+  --color-silver-2: #b1b1b1;
+  --color-silver-3: #a3a3a3;
+  --color-silver-gradient: linear-gradient(to bottom, var(--color-silver-1) 0%, var(--color-silver-2) 50%, var(--color-silver-3) 100%);
+  --color-gray: #333;
+  --color-gray-2: #888;
+  --color-gray-3: #ccc;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-red: red;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: Orgon-Regular, Arial, Helvetica, sans-serif;
+  background: var(--primary-color);
+  color: var(--color-gray);
+}
+
+#app {
+  overflow: hidden;
+}

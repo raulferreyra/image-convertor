@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Orgon-Black';
+    src: url(../fonts/Orgon-Black.eot) format("embedded-opentype"), url(../fonts/Orgon-Black.otf) format("opentype"), url(../fonts/Orgon-Black.woff) format("woff"), url(../fonts/Orgon-Black.ttf) format("truetype"), url(../fonts/Orgon-Black.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orgon-BlackIt';
+    src: url(../fonts/Orgon-BlackIt.eot) format("embedded-opentype"), url(../fonts/Orgon-BlackIt.otf) format("opentype"), url(../fonts/Orgon-BlackIt.woff) format("woff"), url(../fonts/Orgon-BlackIt.ttf) format("truetype"), url(../fonts/Orgon-BlackIt.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orgon-Bold';
+    src: url(../fonts/Orgon-Bold.eot) format("embedded-opentype"), url(../fonts/Orgon-Bold.otf) format("opentype"), url(../fonts/Orgon-Bold.woff) format("woff"), url(../fonts/Orgon-Bold.ttf) format("truetype"), url(../fonts/Orgon-Bold.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orgon-BoldIt';
+    src: url(../fonts/Orgon-BoldIt.eot) format("embedded-opentype"), url(../fonts/Orgon-BoldIt.otf) format("opentype"), url(../fonts/Orgon-BoldIt.woff) format("woff"), url(../fonts/Orgon-BoldIt.ttf) format("truetype"), url(../fonts/Orgon-BoldIt.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orgon-ExtraBold';
+    src: url(../fonts/Orgon-ExtraBold.eot) format("embedded-opentype"), url(../fonts/Orgon-ExtraBold.otf) format("opentype"), url(../fonts/Orgon-ExtraBold.woff) format("woff"), url(../fonts/Orgon-ExtraBold.ttf) format("truetype"), url(../fonts/Orgon-ExtraBold.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orgon-ExtraBoldIt';
+    src: url(../fonts/Orgon-ExtraBoldIt.eot) format("embedded-opentype"), url(../fonts/Orgon-ExtraBoldIt.otf) format("opentype"), url(../fonts/Orgon-ExtraBoldIt.woff) format("woff"), url(../fonts/Orgon-ExtraBoldIt.ttf) format("truetype"), url(../fonts/Orgon-ExtraBoldIt.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orgon-ExtraLight';
+    src: url(../fonts/Orgon-ExtraLight.eot) format("embedded-opentype"), url(../fonts/Orgon-ExtraLight.otf) format("opentype"), url(../fonts/Orgon-ExtraLight.woff) format("woff"), url(../fonts/Orgon-ExtraLight.ttf) format("truetype"), url(../fonts/Orgon-ExtraLight.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orgon-ExtraLightIt';
+    src: url(../fonts/Orgon-ExtraLightIt.eot) format("embedded-opentype"), url(../fonts/Orgon-ExtraLightIt.otf) format("opentype"), url(../fonts/Orgon-ExtraLightIt.woff) format("woff"), url(../fonts/Orgon-ExtraLightIt.ttf) format("truetype"), url(../fonts/Orgon-ExtraLightIt.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orgon-Italic';
+    src: url(../fonts/Orgon-Italic.eot) format("embedded-opentype"), url(../fonts/Orgon-Italic.otf) format("opentype"), url(../fonts/Orgon-Italic.woff) format("woff"), url(../fonts/Orgon-Italic.ttf) format("truetype"), url(../fonts/Orgon-Italic.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orgon-Light';
+    src: url(../fonts/Orgon-Light.eot) format("embedded-opentype"), url(../fonts/Orgon-Light.otf) format("opentype"), url(../fonts/Orgon-Light.woff) format("woff"), url(../fonts/Orgon-Light.ttf) format("truetype"), url(../fonts/Orgon-Light.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orgon-LightIt';
+    src: url(../fonts/Orgon-LightIt.eot) format("embedded-opentype"), url(../fonts/Orgon-LightIt.otf) format("opentype"), url(../fonts/Orgon-LightIt.woff) format("woff"), url(../fonts/Orgon-LightIt.ttf) format("truetype"), url(../fonts/Orgon-LightIt.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orgon-Medium';
+    src: url(../fonts/Orgon-Medium.eot) format("embedded-opentype"), url(../fonts/Orgon-Medium.otf) format("opentype"), url(../fonts/Orgon-Medium.woff) format("woff"), url(../fonts/Orgon-Medium.ttf) format("truetype"), url(../fonts/Orgon-Medium.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orgon-MediumIt';
+    src: url(../fonts/Orgon-MediumIt.eot) format("embedded-opentype"), url(../fonts/Orgon-MediumIt.otf) format("opentype"), url(../fonts/Orgon-MediumIt.woff) format("woff"), url(../fonts/Orgon-MediumIt.ttf) format("truetype"), url(../fonts/Orgon-MediumIt.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orgon-Regular';
+    src: url(../fonts/Orgon-Regular.eot) format("embedded-opentype"), url(../fonts/Orgon-Regular.otf) format("opentype"), url(../fonts/Orgon-Regular.woff) format("woff"), url(../fonts/Orgon-Regular.ttf) format("truetype"), url(../fonts/Orgon-Regular.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orgon-Thin';
+    src: url(../fonts/Orgon-Thin.eot) format("embedded-opentype"), url(../fonts/Orgon-Thin.otf) format("opentype"), url(../fonts/Orgon-Thin.woff) format("woff"), url(../fonts/Orgon-Thin.ttf) format("truetype"), url(../fonts/Orgon-Thin.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orgon-ThinIt';
+    src: url(../fonts/Orgon-ThinIt.eot) format("embedded-opentype"), url(../fonts/Orgon-ThinIt.otf) format("opentype"), url(../fonts/Orgon-ThinIt.woff) format("woff"), url(../fonts/Orgon-ThinIt.ttf) format("truetype"), url(../fonts/Orgon-ThinIt.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
