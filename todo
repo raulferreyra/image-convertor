@@ -1,0 +1,11 @@
+TODO
+- GUI (FrontEnd)
+- Update BackEnd with FrontEnd connection
+    - Image Resizer
+    - Convert in another extensions
+- Elementor
+
+COMPLETE
+- Backend
+    - Convert image in WebP
+    - Max images size
