@@ -1,16 +1,18 @@
-"scripts": {
-    "dev": "concurrently \"vite --host --cwd frontend\" \"wait-on http://localhost:5173 && electron .\"",
-    "build": "electron-builder"
-},
-"main": "electron/main.js",
-"build": {
-    "appId": "com.imagecompressor.app",
-    "files": [
-        "frontend/dist/**",
-        "electron/**",
-        "backend/**"
-    ],
-    "directories": {
-        "buildResources": "assets"
+{
+    "scripts": {
+        "dev": "concurrently \"vite --host --cwd frontend\" \"wait-on http://localhost:5173 && electron .\"",
+        "build": "electron-builder"
+    },
+    "main": "electron/main.js",
+    "build": {
+        "appId": "com.imagecompressor.app",
+        "files": [
+            "frontend/dist/**",
+            "electron/**",
+            "backend/**"
+        ],
+        "directories": {
+            "buildResources": "assets"
+        }
     }
 }
