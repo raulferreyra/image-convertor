@@ -109,7 +109,8 @@ header h1 {
     width: 100%;
 }
 
-#settings .folders {
+#settings .folders,
+#settings .changes {
     width: 100%;
     max-width: 700px;
     display: flex;
@@ -165,5 +166,20 @@ header h1 {
 #settings .folder_box .Boxing_folder span {
     margin: 10px auto 0;
     font-size: .4em;
+}
+
+#settings .row {
+    width: 100%;
+    margin: 0 auto 10px;
+}
+
+#settings .row ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+#settings .row.message {
+    font-size: 10px;
+    color: var(--color-red);
 }
 </style>
