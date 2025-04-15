@@ -14,7 +14,7 @@
                     <input type="file" class="file_hidden" name="file_dest" id="file_dest" aria-hidden="true">
                 </div>
             </div>
-            GITHUB CAN YOU HEAR ME?
+            
         </form>
     </div>
 </template>
