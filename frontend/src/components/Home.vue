@@ -5,11 +5,14 @@
             <h1>CONVERSOR DE IMÁGENES</h1>
         </header>
         <form id="settings">
-            <div class="folder_box">
-                <label for="file_orig" class="orig Boxing_folder">📚 <span>Carpeta de Origen</span></label>
-                <label for="file_dest" class="dest Boxing_folder">🪄 <span>Carpeta de Destino</span></label>
-                <input type="file" class="file_hidden" name="file_orig" id="file_orig" aria-hidden="true">
-                <input type="file" class="file_hidden" name="file_dest" id="file_dest" aria-hidden="true">
+            <div class="folders">
+                <h2>Seleccione las carpetas</h2>
+                <div class="folder_box">
+                    <label for="file_orig" class="orig Boxing_folder">📚 <span>Carpeta de Origen</span></label>
+                    <label for="file_dest" class="dest Boxing_folder">🪄 <span>Carpeta de Destino</span></label>
+                    <input type="file" class="file_hidden" name="file_orig" id="file_orig" aria-hidden="true">
+                    <input type="file" class="file_hidden" name="file_dest" id="file_dest" aria-hidden="true">
+                </div>
             </div>
         </form>
     </div>
@@ -55,6 +58,7 @@ header img {
 
 header h1 {
     font-size: 2em;
+    font-weight: 700;
 }
 
 #settings {
@@ -64,8 +68,24 @@ header h1 {
     align-items: center;
     width: 100%;
     margin: 0 auto;
-    padding: 40px;
+    padding: 0 40px 40px;
     box-sizing: border-box;
+}
+
+#settings h2 {
+    text-align: left;
+    width: 100%;
+}
+
+#settings .folders {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
 }
 
 #settings .folder_box {
@@ -78,6 +98,7 @@ header h1 {
     width: 100%;
     margin: 0 auto;
     padding: 20px;
+    box-sizing: border-box;
     border: 1px solid var(--color-white);
     border-radius: 50px;
     background: var(--primary-color-3);
