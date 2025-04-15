@@ -4,6 +4,14 @@
             <img :src="logo" alt="URAS" title="URAS">
             <h1>CONVERSOR DE IMÁGENES</h1>
         </header>
+        <form id="settings">
+            <div class="folder_box">
+                <label for="file_orig" class="orig Boxing_folder">📚 <span>Carpeta de Origen</span></label>
+                <label for="file_dest" class="dest Boxing_folder">🪄 <span>Carpeta de Destino</span></label>
+                <input type="file" class="file_hidden" name="file_orig" id="file_orig" aria-hidden="true">
+                <input type="file" class="file_hidden" name="file_dest" id="file_dest" aria-hidden="true">
+            </div>
+        </form>
     </div>
 </template>
 
@@ -15,6 +23,7 @@ import logo from '@/assets/logo.png';
 <style scoped>
 .home-init {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: auto;
@@ -46,5 +55,62 @@ header img {
 
 header h1 {
     font-size: 2em;
+}
+
+#settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+#settings .folder_box {
+    height: auto;
+    max-width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--color-white);
+    border-radius: 50px;
+    background: var(--primary-color-3);
+}
+
+#settings .folder_box .file_hidden {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#settings .folder_box .Boxing_folder {
+    border: 1px solid var(--color-white);
+    width: 300px;
+    height: 100%;
+    font-size: 3em;
+    border-radius: 50px;
+    padding: 20px 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+#settings .folder_box .Boxing_folder:hover {
+    background-color: var(--primary-color-2);
+}
+
+#settings .folder_box .Boxing_folder span {
+    margin: 10px auto 0;
+    font-size: .4em;
 }
 </style>
