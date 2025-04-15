@@ -14,7 +14,38 @@
                     <input type="file" class="file_hidden" name="file_dest" id="file_dest" aria-hidden="true">
                 </div>
             </div>
-            
+            <div class="changes">
+                <h2>Peso y Formato</h2>
+                <div class="row">
+                    <label for="lot_convert">Conversión de imágenes por lotes: </label>
+                    <select name="lot_convert" id="lot_convert">
+                        <option value="png">PNG</option>
+                        <option value="jpg">JPG</option>
+                        <option value="gif">GIF</option>
+                        <option value="avif">AVIF</option>
+                        <option value="webp">WEBP</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label for="max_weight">Peso Máximo: </label>
+                    <input type="number" name="max_weight" id="max_weight" min="0" max="1000000" step="1" value=""
+                        placeholder="2">
+                </div>
+                <div class="row message">
+                    <ul>
+                        <li>
+                            <label for="max_weight">Si este campo se deja en blanco se considera como un peso máximo de
+                                1MB.</label>
+                        </li>
+                        <li>
+                            <label for="max_weight">Todos los números acá ingresados se considera como MB.</label>
+                        </li>
+                        <li>
+                            <label for="max_weight">Use 0. para reducir por debajo de 1MB el peso de la imagen.</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </form>
     </div>
 </template>
