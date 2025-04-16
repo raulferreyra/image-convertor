@@ -283,6 +283,27 @@ header h1 {
     color: var(--color-red);
 }
 
+#settings input[type="number"],
+#settings select {
+    background-color: var(--color-white);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 8px 10px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: all .3s ease-in-out;
+}
+
+#settings input[type="number"]:focus,
+#settings select:focus {
+    outline: none;
+    border-color: var(--primary-color-2);
+    box-shadow: 0 0 0 3px var(--color-gray-3);
+}
+
+
 #settings #convert {
     background: var(--button-gradient);
     border: 2px solid var(--primary-color-2);
