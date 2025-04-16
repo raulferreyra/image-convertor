@@ -148,8 +148,15 @@ header img {
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 1.4em;
     font-weight: 700;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
 }
 
 #settings {
@@ -181,8 +188,14 @@ header h1 {
 }
 
 #settings .changes {
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    #settings .changes {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 }
 
 #settings .column {
@@ -197,7 +210,8 @@ header h1 {
     height: auto;
     max-width: 700px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 20px;
     justify-content: space-around;
     align-items: center;
     width: 100%;
@@ -207,6 +221,12 @@ header h1 {
     border: 1px solid var(--color-white);
     border-radius: 50px;
     background: var(--primary-color-3);
+}
+
+@media (min-width: 768px) {
+    #settings .folder_box {
+        flex-direction: row;
+    }
 }
 
 #settings .folder_box .file_hidden {
@@ -223,6 +243,7 @@ header h1 {
     border-radius: 50px;
     padding: 20px 0;
     cursor: pointer;
+    color: var(--secondary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -257,15 +278,14 @@ header h1 {
 
 #settings #convert {
     background: var(--button-gradient);
+    border: 2px solid var(--primary-color-2);
     color: white;
-    font-weight: bold;
-    padding: 0.8em 2em;
-    border-radius: 20px;
-    font-size: 1.1em;
+    padding: 12px 30px;
+    border-radius: 30px;
     cursor: pointer;
     margin: 0 0 0 auto;
     display: flex;
-    transition: 0.2s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 #settings #convert:hover {
