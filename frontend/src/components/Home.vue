@@ -286,6 +286,26 @@ header h1 {
     color: var(--color-red);
 }
 
+#settings .row.message ul {
+    list-style: none;
+    background: var(--color-gray);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#settings .row.message ul li {
+    margin-bottom: 5px;
+    padding-left: 15px;
+    position: relative;
+}
+
+#settings .row.message ul li::before {
+    content: '💡';
+    position: absolute;
+    left: 0;
+}
+
 #settings input[type="number"],
 #settings select {
     background-color: var(--color-white);
