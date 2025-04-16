@@ -147,8 +147,11 @@ header img {
 }
 
 header h1 {
-    font-size: 1.4em;
+    margin-left: 1rem;
+    font-size: 1.6em;
+    line-height: 1.2;
     font-weight: 700;
+    font-family: Orgon-Bold, Arial, Helvetica, sans-serif;
     transition: all 0.3s ease-in-out;
 }
 
