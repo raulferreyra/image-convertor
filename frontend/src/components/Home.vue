@@ -28,10 +28,13 @@
                         </select>
                     </div>
                     <div class="row">
-                        <label for="max_weight">Peso Máximo: </label>
-                        <input type="number" name="max_weight" id="max_weight" min="0" max="1000000" step="1" value=""
-                            placeholder="2">
-                        <label for="max_weight">MB</label>
+                        <div class="row input-unit">
+                            <label for="max_weight">Peso Máximo:</label>
+                            <div class="input-wrapper">
+                                <input type="number" name="max_weight" id="max_weight" placeholder="1" />
+                                <span class="unit">MB</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="row message">
                         <ul>
@@ -67,17 +70,19 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="row">
-                        <label for="red_width">Ancho: </label>
-                        <input type="number" name="red_width" id="red_width" placeholder="Ancho" value="" min="1"
-                            max="1000000">
-                        <label for="red_width">PX</label>
+                    <div class="row input-unit">
+                        <label for="red_width">Ancho:</label>
+                        <div class="input-wrapper">
+                            <input type="number" name="red_width" id="red_width" placeholder="Ancho" />
+                            <span class="unit">PX</span>
+                        </div>
                     </div>
-                    <div class="row">
-                        <label for="red_height">Alto: </label>
-                        <input type="number" name="red_height" id="red_height" placeholder="Alto" value="" min="1"
-                            max="1000000">
-                        <label for="red_height">PX</label>
+                    <div class="row input-unit">
+                        <label for="red_height">Alto:</label>
+                        <div class="input-wrapper">
+                            <input type="number" name="red_height" id="red_height" placeholder="Alto" />
+                            <span class="unit">PX</span>
+                        </div>
                     </div>
                     <div class="row">
                         <label for="red_prop">¿Desea Mantener la Proporción?</label>
@@ -331,6 +336,25 @@ header h1 {
     box-shadow: 0 0 0 3px var(--color-gray-3);
 }
 
+#settings .input-unit .input-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#settings .input-unit .input-wrapper input {
+    width: 100%;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+#settings .input-unit .input-wrapper .unit {
+    position: absolute;
+    right: 10px;
+    color: var(--color-gray-light, #aaa);
+    font-size: 0.9em;
+}
 
 #settings #convert {
     background: var(--button-gradient);
