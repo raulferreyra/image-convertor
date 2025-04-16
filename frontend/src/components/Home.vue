@@ -376,7 +376,7 @@ header h1 {
 
 #settings #convert {
     background: var(--button-gradient);
-    border: 2px solid var(--primary-color-2);
+    border: 2px solid var(--secondary-color-2);
     color: white;
     padding: 12px 30px;
     border-radius: 30px;
@@ -390,7 +390,7 @@ header h1 {
 }
 
 #settings #convert:hover {
-    background: var(--color-button-3);
+    background: var(--button-gradient-reverse);
     transform: scale(1.05);
 }
 
