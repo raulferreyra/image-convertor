@@ -57,10 +57,10 @@
                                 <p>Todas las imágenes tendrán el mismo tamaño que coloques en esta sección.</p>
                             </li>
                             <li>
-                                <p>Si dejas el tamaño de Ancho en blanco, no se moficiará ese tamaño.</p>
+                                <p>Si dejas el tamaño de Ancho en blanco, no se moficará ese tamaño.</p>
                             </li>
                             <li>
-                                <p>Si dejas el tamaño de Alto en blanco, no se moficiará ese tamaño.</p>
+                                <p>Si dejas el tamaño de Alto en blanco, no se moficará ese tamaño.</p>
                             </li>
                             <li>
                                 <p>Todas las imágenes se trabajan en Píxeles (px).</p>
@@ -203,6 +203,14 @@ header h1 {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    #settings .column {
+        width: 50%;
+    }
 }
 
 #settings .folder_box {
