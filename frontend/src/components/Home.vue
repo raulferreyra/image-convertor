@@ -138,7 +138,7 @@ header {
     background: var(--color-white);
     color: var(--primary-color);
     border-radius: 1rem;
-    margin: .8rem auto;
+    margin: 0 auto;
 }
 
 header img {
@@ -159,7 +159,7 @@ header h1 {
     align-items: center;
     width: 100%;
     margin: 0 auto;
-    padding: 0 40px 40px;
+    padding: 0 40px;
     box-sizing: border-box;
 }
 
