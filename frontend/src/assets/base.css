@@ -18,6 +18,10 @@
   --color-black: #000;
   --color-white: #fff;
   --color-red: red;
+  --color-button-1: #4D91FF;
+  --color-button-2: #2563EB;
+  --color-button-3: #1E3A8A;
+  --button-gradient: linear-gradient(to right, var(--color-button-1), var(--color-button-2));
 }
 
 body,
