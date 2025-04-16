@@ -8,12 +8,19 @@
             <div class="folders">
                 <h2>Seleccione las carpetas</h2>
                 <div class="folder_box">
-                    <label for="file_orig" class="orig Boxing_folder">📚 <span>Carpeta de Origen</span></label>
-                    <label for="file_dest" class="dest Boxing_folder">🖼️ <span>Carpeta de Destino</span></label>
-                    <input type="file" class="file_hidden" name="file_orig" id="file_orig" aria-hidden="true">
-                    <input type="file" class="file_hidden" name="file_dest" id="file_dest" aria-hidden="true">
+                    <div class="folder-item">
+                        <label for="file_orig" class="Boxing_folder">📁 Carpeta de Origen</label>
+                        <input type="file" id="file_orig" webkitdirectory directory class="file_hidden">
+                        <p class="folder-path" id="origin-path">Ninguna carpeta seleccionada</p>
+                    </div>
+                    <div class="folder-item">
+                        <label for="file_dest" class="Boxing_folder">📁 Carpeta de Destino</label>
+                        <input type="file" id="file_dest" webkitdirectory directory class="file_hidden">
+                        <p class="folder-path" id="dest-path">Ninguna carpeta seleccionada</p>
+                    </div>
                 </div>
             </div>
+
             <div class="changes">
                 <div class="column">
                     <h2>Peso y Formato</h2>
@@ -272,13 +279,24 @@ header h1 {
     transition: all 0.3s ease-in-out;
 }
 
-#settings .folder_box .Boxing_folder:hover {
-    background-color: var(--primary-color-2);
+#settings .folder-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .8em;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
 }
 
-#settings .folder_box .Boxing_folder span {
-    margin: 10px auto 0;
-    font-size: .4em;
+#settings .folder-path {
+    font-size: 0.85em;
+    color: var(--color-white);
+    text-align: center;
+    max-width: 100%;
+    word-break: break-word;
+    font-style: italic;
+    padding: 0 10px;
 }
 
 #settings .row {
