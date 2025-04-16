@@ -24,6 +24,10 @@
   --button-gradient: linear-gradient(to right, var(--color-button-1), var(--color-button-2));
 }
 
+* {
+  transition: all 0.25s ease-in-out;
+}
+
 body,
 html {
   margin: 0;
