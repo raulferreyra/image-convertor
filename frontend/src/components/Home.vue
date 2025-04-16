@@ -336,6 +336,9 @@ header h1 {
     cursor: pointer;
     margin: 0 0 0 auto;
     display: flex;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px var(--color-black);
     transition: all 0.3s ease;
 }
 
