@@ -256,22 +256,20 @@ header h1 {
 }
 
 #settings #convert {
-    background: var(--primary-color-3);
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 50px;
-    padding: 10px 15px;
-    text-align: center;
+    background: var(--button-gradient);
+    color: white;
+    font-weight: bold;
+    padding: 0.8em 2em;
+    border-radius: 20px;
+    font-size: 1.1em;
+    cursor: pointer;
     margin: 0 0 0 auto;
     display: flex;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    font-size: .8em;
+    transition: 0.2s ease-in-out;
 }
 
 #settings #convert:hover {
-    background: var(--primary-color);
-    color: var(--primary-color-3);
-    border: 1px solid var(--primary-color-3);
+    background: var(--color-button-3);
+    transform: scale(1.05);
 }
 </style>
