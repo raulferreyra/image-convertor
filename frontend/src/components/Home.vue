@@ -9,7 +9,7 @@
                 <h2>Seleccione las carpetas</h2>
                 <div class="folder_box">
                     <label for="file_orig" class="orig Boxing_folder">📚 <span>Carpeta de Origen</span></label>
-                    <label for="file_dest" class="dest Boxing_folder">🪄 <span>Carpeta de Destino</span></label>
+                    <label for="file_dest" class="dest Boxing_folder">🖼️ <span>Carpeta de Destino</span></label>
                     <input type="file" class="file_hidden" name="file_orig" id="file_orig" aria-hidden="true">
                     <input type="file" class="file_hidden" name="file_dest" id="file_dest" aria-hidden="true">
                 </div>
@@ -42,6 +42,20 @@
                         </li>
                         <li>
                             <label for="max_weight">Use 0. para reducir por debajo de 1MB el peso de la imagen.</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="changes">
+                <h2>Redimensionamiento</h2>
+                <div class="row message">
+                    <ul>
+                        <li>
+                            <label for="">Todas las imágenes tendrán el mismo tamaño que coloques en esta
+                                sección.</label>
+                            <label for="">Si dejas el tamaño de Ancho en blanco, no se moficiará ese tamaño.</label>
+                            <label for="">Si dejas el tamaño de Alto en blanco, no se moficiará ese tamaño.</label>
+                            <label for="">Todas las imágenes se trabajan en Píxeles (px).</label>
                         </li>
                     </ul>
                 </div>
