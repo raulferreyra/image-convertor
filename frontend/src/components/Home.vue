@@ -15,49 +15,94 @@
                 </div>
             </div>
             <div class="changes">
-                <h2>Peso y Formato</h2>
-                <div class="row">
-                    <label for="lot_convert">Conversión de imágenes por lotes: </label>
-                    <select name="lot_convert" id="lot_convert">
-                        <option value="png">PNG</option>
-                        <option value="jpg">JPG</option>
-                        <option value="gif">GIF</option>
-                        <option value="avif">AVIF</option>
-                        <option value="webp">WEBP</option>
-                    </select>
+                <div class="column">
+                    <h2>Peso y Formato</h2>
+                    <div class="row">
+                        <label for="lot_convert">Conversión de imágenes por lotes: </label>
+                        <select name="lot_convert" id="lot_convert">
+                            <option value="png">PNG</option>
+                            <option value="jpg">JPG</option>
+                            <option value="gif">GIF</option>
+                            <option value="avif">AVIF</option>
+                            <option value="webp">WEBP</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label for="max_weight">Peso Máximo: </label>
+                        <input type="number" name="max_weight" id="max_weight" min="0" max="1000000" step="1" value=""
+                            placeholder="2">
+                        <label for="max_weight">MB</label>
+                    </div>
+                    <div class="row message">
+                        <ul>
+                            <li>
+                                <label for="max_weight">Si este campo se deja en blanco se considera como un peso máximo
+                                    de 1MB.</label>
+                            </li>
+                            <li>
+                                <label for="max_weight">Todos los números acá ingresados se considera como MB.</label>
+                            </li>
+                            <li>
+                                <label for="max_weight">Use 0. para reducir por debajo de 1MB el peso de la
+                                    imagen.</label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="row">
-                    <label for="max_weight">Peso Máximo: </label>
-                    <input type="number" name="max_weight" id="max_weight" min="0" max="1000000" step="1" value=""
-                        placeholder="2">
-                </div>
-                <div class="row message">
-                    <ul>
-                        <li>
-                            <label for="max_weight">Si este campo se deja en blanco se considera como un peso máximo de
-                                1MB.</label>
-                        </li>
-                        <li>
-                            <label for="max_weight">Todos los números acá ingresados se considera como MB.</label>
-                        </li>
-                        <li>
-                            <label for="max_weight">Use 0. para reducir por debajo de 1MB el peso de la imagen.</label>
-                        </li>
-                    </ul>
+                <div class="column">
+                    <h2>Redimensionamiento</h2>
+                    <div class="row message">
+                        <ul>
+                            <li>
+                                <label for="">Todas las imágenes tendrán el mismo tamaño que coloques en esta
+                                    sección.</label>
+                            </li>
+                            <li>
+                                <label for="">Si dejas el tamaño de Ancho en blanco, no se moficiará ese tamaño.</label>
+                            </li>
+                            <li>
+                                <label for="">Si dejas el tamaño de Alto en blanco, no se moficiará ese tamaño.</label>
+                            </li>
+                            <li>
+                                <label for="">Todas las imágenes se trabajan en Píxeles (px).</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <label for="red_width">Ancho: </label>
+                        <input type="number" name="red_width" id="red_width" placeholder="Ancho" value="" min="1"
+                            max="1000000">
+                        <label for="red_width">PX</label>
+                    </div>
+                    <div class="row">
+                        <label for="red_height">Alto: </label>
+                        <input type="number" name="red_height" id="red_height" placeholder="Alto" value="" min="1"
+                            max="1000000">
+                        <label for="red_height">PX</label>
+                    </div>
+                    <div class="row">
+                        <label for="red_prop">¿Desea Mantener la Proporción?</label>
+                        <input type="checkbox" name="red_prop" id="red_prop">
+                    </div>
+                    <div class="row message">
+                        <ul>
+                            <li>
+                                <label for="red_prop">No coloque Ancho y Alto, no funciona de esa forma.</label>
+                            </li>
+                            <li>
+                                <label for="red_prop">Elija solo uno.</label>
+                            </li>
+                            <li>
+                                <label for="red_prop">En caso escribir los 2 campos, solo el Ancho tendrá
+                                    prioridad.</label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="changes">
-                <h2>Redimensionamiento</h2>
-                <div class="row message">
-                    <ul>
-                        <li>
-                            <label for="">Todas las imágenes tendrán el mismo tamaño que coloques en esta
-                                sección.</label>
-                            <label for="">Si dejas el tamaño de Ancho en blanco, no se moficiará ese tamaño.</label>
-                            <label for="">Si dejas el tamaño de Alto en blanco, no se moficiará ese tamaño.</label>
-                            <label for="">Todas las imágenes se trabajan en Píxeles (px).</label>
-                        </li>
-                    </ul>
+                <div class="row">
+                    <input type="button" value="Convertir" id="convert" name="convert">
                 </div>
             </div>
         </form>
@@ -135,6 +180,19 @@ header h1 {
     text-align: left;
 }
 
+#settings .changes {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#settings .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
 #settings .folder_box {
     height: auto;
     max-width: 700px;
@@ -195,5 +253,25 @@ header h1 {
 #settings .row.message {
     font-size: 10px;
     color: var(--color-red);
+}
+
+#settings #convert {
+    background: var(--primary-color-3);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    padding: 10px 15px;
+    text-align: center;
+    margin: 0 0 0 auto;
+    display: flex;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: .8em;
+}
+
+#settings #convert:hover {
+    background: var(--primary-color);
+    color: var(--primary-color-3);
+    border: 1px solid var(--primary-color-3);
 }
 </style>
