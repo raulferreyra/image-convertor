@@ -161,6 +161,17 @@ header h1 {
     }
 }
 
+#settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
 .home-init,
 #settings {
     animation: fadeInUp 0.6s ease both;
@@ -176,17 +187,6 @@ header h1 {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-#settings {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 40px;
-    box-sizing: border-box;
 }
 
 #settings h2 {
