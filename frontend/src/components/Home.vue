@@ -264,9 +264,8 @@ header h1 {
 
 #settings .folder_box .Boxing_folder {
     border: 1px solid var(--color-white);
-    width: 300px;
     height: 100%;
-    font-size: 3em;
+    font-size: 2.5em;
     border-radius: 50px;
     padding: 20px 0;
     cursor: pointer;
