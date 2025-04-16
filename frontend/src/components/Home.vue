@@ -177,18 +177,6 @@ header h1 {
     animation: fadeInUp 0.6s ease both;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 #settings h2 {
     text-align: left;
     width: 100%;
@@ -362,5 +350,17 @@ header h1 {
 #settings #convert:hover {
     background: var(--color-button-3);
     transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 </style>
