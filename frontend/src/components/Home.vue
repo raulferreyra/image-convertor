@@ -54,17 +54,16 @@
                     <div class="row message">
                         <ul>
                             <li>
-                                <label for="">Todas las imágenes tendrán el mismo tamaño que coloques en esta
-                                    sección.</label>
+                                <p>Todas las imágenes tendrán el mismo tamaño que coloques en esta sección.</p>
                             </li>
                             <li>
-                                <label for="">Si dejas el tamaño de Ancho en blanco, no se moficiará ese tamaño.</label>
+                                <p>Si dejas el tamaño de Ancho en blanco, no se moficiará ese tamaño.</p>
                             </li>
                             <li>
-                                <label for="">Si dejas el tamaño de Alto en blanco, no se moficiará ese tamaño.</label>
+                                <p>Si dejas el tamaño de Alto en blanco, no se moficiará ese tamaño.</p>
                             </li>
                             <li>
-                                <label for="">Todas las imágenes se trabajan en Píxeles (px).</label>
+                                <p>Todas las imágenes se trabajan en Píxeles (px).</p>
                             </li>
                         </ul>
                     </div>
