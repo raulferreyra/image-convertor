@@ -153,14 +153,14 @@ header {
 }
 
 header img {
-    width: 5rem;
+    width: 3rem;
     object-fit: cover;
     height: auto;
 }
 
 header h1 {
-    margin-left: 1rem;
-    font-size: 1.6em;
+    margin-left: .5rem;
+    font-size: 1em;
     line-height: 1.2;
     font-weight: 700;
     font-family: Orgon-Bold, Arial, Helvetica, sans-serif;
@@ -169,7 +169,7 @@ header h1 {
 
 @media (min-width: 768px) {
     header h1 {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
 
@@ -192,18 +192,26 @@ header h1 {
 #settings h2 {
     text-align: left;
     width: 100%;
+    font-size: .8em;
+}
+
+@media (min-width: 768px) {
+    #settings h2 {
+        font-size: 1.2em;
+    }
 }
 
 #settings .folders,
 #settings .changes {
     width: 100%;
-    max-width: 700px;
+    max-width: 550px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
     text-align: left;
+    font-size: .9rem;
 }
 
 #settings .changes {
@@ -235,7 +243,7 @@ header h1 {
 
 #settings .folder_box {
     height: auto;
-    max-width: 700px;
+    max-width: 550px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -243,7 +251,7 @@ header h1 {
     align-items: center;
     width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px 10px;
     box-sizing: border-box;
     border: 1px solid var(--color-white);
     border-radius: 50px;
@@ -265,9 +273,9 @@ header h1 {
 #settings .folder_box .Boxing_folder {
     border: 1px solid var(--color-white);
     height: 100%;
-    font-size: 2.5em;
+    font-size: 1.4em;
     border-radius: 50px;
-    padding: 20px 0;
+    padding: 20px;
     cursor: pointer;
     color: var(--secondary-color);
     display: flex;
@@ -295,7 +303,8 @@ header h1 {
     max-width: 100%;
     word-break: break-word;
     font-style: italic;
-    padding: 0 10px;
+    padding: 0 5px;
+    margin: 0;
 }
 
 #settings .row {
@@ -318,7 +327,6 @@ header h1 {
     background: var(--color-gray);
     padding: 10px;
     border-radius: 10px;
-    margin-top: 10px;
 }
 
 #settings .row.message ul li {
@@ -342,7 +350,7 @@ header h1 {
     border-radius: 10px;
     width: 100%;
     box-sizing: border-box;
-    font-size: 1rem;
+    font-size: .8rem;
     transition: all .3s ease-in-out;
 }
 
@@ -382,7 +390,7 @@ header h1 {
     cursor: pointer;
     margin: 0 0 0 auto;
     display: flex;
-    font-size: 1.1rem;
+    font-size: .9rem;
     font-weight: 600;
     box-shadow: 0 4px 10px var(--color-black);
     transition: all 0.3s ease;

@@ -31,10 +31,10 @@
   transition: all 0.25s ease-in-out;
 }
 
-body,
-html {
+html,
+body {
   margin: 0;
-  padding: 2em;
+  padding: 0;
   width: 100%;
   height: auto;
   min-height: 100vh;
@@ -42,6 +42,13 @@ html {
   font-family: Orgon-Regular, Arial, Helvetica, sans-serif;
   background: var(--primary-color);
   color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  padding: 2em;
 }
 
 #app {
