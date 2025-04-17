@@ -118,14 +118,16 @@
             </div>
         </form>
     </div>
+    <Donations />
 </template>
 
 
 <script setup>
 import logo from '@/assets/logo.png';
+import Donations from '@/components/Donations.vue';
 </script>
 
-<style scoped>
+<style lang="css" scoped>
 .home-init {
     display: flex;
     flex-direction: column;
