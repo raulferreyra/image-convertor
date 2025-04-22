@@ -52,10 +52,6 @@
                             <li>
                                 <label for="max_weight">Todos los números acá ingresados se considera como MB.</label>
                             </li>
-                            <li>
-                                <label for="max_weight">Use 0. para reducir por debajo de 1MB el peso de la
-                                    imagen.</label>
-                            </li>
                         </ul>
                     </div>
                 </div>
