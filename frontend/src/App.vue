@@ -5,5 +5,5 @@ import Donations from './components/Donations.vue'
 
 <template>
   <Home />
-  <Donations />
+  <Donations :overflowStage="overflowStage" />
 </template>
