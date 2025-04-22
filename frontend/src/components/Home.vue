@@ -187,8 +187,15 @@ header h1 {
     align-items: center;
     width: 100%;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 20px;
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    #settings {
+        padding: 0 40px;
+    }
 }
 
 .home-init,
@@ -238,13 +245,17 @@ header h1 {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0;
+    gap: 10px;
+    box-sizing: border-box;
     width: 100%;
+    transition: all 0.3s ease-in-out;
 }
 
 @media (min-width: 768px) {
     #settings .column {
         width: 50%;
+        padding: 1rem;
     }
 }
 
