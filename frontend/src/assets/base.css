@@ -45,6 +45,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 #app {
@@ -53,5 +54,6 @@ body {
   padding: 2em;
   margin: 0;
   box-sizing: border-box;
-  position: absolute;
+  position: relative;
+  overflow: hidden;
 }
