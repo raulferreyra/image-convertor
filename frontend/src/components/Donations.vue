@@ -17,7 +17,7 @@
 <style lang="css" scoped>
 .overflow {
     position: absolute;
-    top: 0;
+    top: 100%;
     left: 0;
     background: rgba(200, 200, 200, .2);
     width: 100%;
@@ -25,6 +25,14 @@
     overflow: hidden;
     display: flex;
     transition: all .3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.overflow.active {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
 }
 
 .overflow .frame {
