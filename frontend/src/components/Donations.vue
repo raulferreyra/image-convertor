@@ -86,6 +86,14 @@ const handleCloseOverflow = () => {
     cursor: pointer;
 }
 
+.overflow .message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .overflow .frame h2.title {
     text-align: center;
     font-size: 1.2rem;
@@ -95,6 +103,41 @@ const handleCloseOverflow = () => {
 .overflow .frame h3.subtitle {
     text-align: center;
     font-size: 1rem;
-    margin: 0 auto .3rem;
+    margin: 0 auto .5rem;
+}
+
+.overflow .frame .buttons-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.overflow .frame a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: .6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto .5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    transition: all .3s ease-in-out;
+}
+
+.overflow .frame a:hover {
+    background-color: var(--color-white);
+    color: var(--primary-color);
+}
+
+.overflow .frame a img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+    object-fit: contain;
 }
 </style>
