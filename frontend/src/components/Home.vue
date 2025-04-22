@@ -118,13 +118,11 @@
             </div>
         </form>
     </div>
-    <Donations />
 </template>
 
 
 <script setup>
 import logo from '@/assets/logo.png';
-import Donations from '@/components/Donations.vue';
 </script>
 
 <style lang="css" scoped>
@@ -137,6 +135,7 @@ import Donations from '@/components/Donations.vue';
     width: 100%;
     margin: 0 auto;
     padding: 0;
+    position: relative;
     background-color: var(--primary-color);
     color: var(--color-white);
 }
