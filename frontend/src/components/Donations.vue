@@ -1,5 +1,5 @@
 <template>
-    <div class="overflow">
+    <div class="overflow" :class="{ active: isActive }">
         <div class="frame">
             <div class="close-button">X</div>
             <div class="message">
@@ -13,6 +13,20 @@
         </div>
     </div>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+const props = defineProps({
+    overflowStage: {
+        type: Boolean,
+        default: false
+    }
+});
+const isActive = ref(false);
+watch(() => props.overflowStage, () => {
+    isActive.value = true;
+});
+</script>
 
 <style lang="css" scoped>
 .overflow {
