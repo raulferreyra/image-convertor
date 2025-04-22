@@ -26,4 +26,21 @@
     display: flex;
     transition: all .3s ease-in-out;
 }
+
+.overflow .frame {
+    background: var(--secondary-color);
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 400px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border: .2rem solid var(--primary-color);
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
 </style>
