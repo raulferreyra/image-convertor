@@ -69,4 +69,23 @@ const handleCloseOverflow = () => {
     box-sizing: border-box;
     transition: all .3s ease-in-out;
 }
+
+.overflow .frame .close-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.overflow .frame h2.title {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem auto .4rem;
+}
+
+.overflow .frame h3.subtitle {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 auto .3rem;
+}
 </style>
