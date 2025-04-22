@@ -6,8 +6,14 @@
                 <h2 class="title">Si te gusta mi herramienta</h2>
                 <h3 class="subtitle">por favor apóyame</h3>
                 <div class="buttons-row">
-                    <a href="https://" target="_blank" rel="noopener noreferrer">Por Plin (Solo Perú)</a>
-                    <a href="https://" target="_blank" rel="noopener noreferrer">PayPal (Otros Países)</a>
+                    <a href="https://" target="_blank" rel="noopener noreferrer">
+                        <img :src="plin" alt="PLIN" title="PLIN">
+                        Por Plin (Solo Perú)
+                    </a>
+                    <a href="https://" target="_blank" rel="noopener noreferrer">
+                        <img :src="paypal" alt="Paypal" title="Paypal">
+                        PayPal (Otros Países)
+                    </a>
                 </div>
             </div>
         </div>
@@ -15,6 +21,9 @@
 </template>
 
 <script setup>
+import paypal from '@/assets/paypal.png';
+import plin from '@/assets/plin.png';
+
 const props = defineProps({
     overflowStage: Boolean
 })
