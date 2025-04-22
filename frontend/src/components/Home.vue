@@ -112,7 +112,8 @@
                 </div>
             </div>
             <div class="changes">
-                <div class="row">
+                <div class="row-button">
+                    <input type="button" value="Donar" id="donation" name="donation">
                     <input type="button" value="Convertir" id="convert" name="convert">
                 </div>
             </div>
@@ -313,6 +314,14 @@ header h1 {
     margin: 0 auto 10px;
 }
 
+
+#settings .row-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
 #settings .row ul {
     margin: 0;
     padding: 0 0 0 20px;
@@ -382,6 +391,7 @@ header h1 {
     font-size: 0.9em;
 }
 
+#settings #donation,
 #settings #convert {
     background: var(--button-gradient);
     border: 2px solid var(--secondary-color-2);
@@ -389,7 +399,7 @@ header h1 {
     padding: 12px 30px;
     border-radius: 30px;
     cursor: pointer;
-    margin: 0 0 0 auto;
+    margin: 0;
     display: flex;
     font-size: .9rem;
     font-weight: 600;
@@ -397,6 +407,7 @@ header h1 {
     transition: all 0.3s ease;
 }
 
+#settings #donation:hover,
 #settings #convert:hover {
     background: var(--button-gradient-reverse);
     transform: scale(1.05);
