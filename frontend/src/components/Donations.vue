@@ -5,8 +5,10 @@
             <div class="message">
                 <h2 class="title">Si te gusta mi herramienta</h2>
                 <h3 class="subtitle">por favor apóyame</h3>
-                <a href="https://" target="_blank" rel="noopener noreferrer">Por Plin (Solo Perú)</a>
-                <a href="https://" target="_blank" rel="noopener noreferrer">PayPal (Otros Países)</a>
+                <div class="buttons-row">
+                    <a href="https://" target="_blank" rel="noopener noreferrer">Por Plin (Solo Perú)</a>
+                    <a href="https://" target="_blank" rel="noopener noreferrer">PayPal (Otros Países)</a>
+                </div>
             </div>
         </div>
     </div>
