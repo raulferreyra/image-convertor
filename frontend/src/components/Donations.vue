@@ -1,7 +1,7 @@
 <template>
-    <div class="overflow" :class="{ active: isActive }">
+    <div class="overflow" :class="{ active: props.overflowStage }">
         <div class="frame">
-            <div class="close-button" @click="handleCloseOverflow()">X</div>
+            <div class="close-button" @click="handleCloseOverflow">X</div>
             <div class="message">
                 <h2 class="title">Si te gusta mi herramienta</h2>
                 <h3 class="subtitle">por favor apóyame</h3>
@@ -14,32 +14,15 @@
     </div>
 </template>
 
-<script>
-import { ref, watch } from 'vue';
+<script setup>
+const props = defineProps({
+    overflowStage: Boolean
+})
 
-export default {
-    props: {
-        overflowStage: {
-            type: Boolean,
-            default: false
-        }
-    },
-    setup(props, { emit }) {
-        const isActive = ref(false);
+const emit = defineEmits(['closeOverflow'])
 
-        watch(() => props.overflowStage, (newValue) => {
-            isActive.value = newValue;
-        });
-
-        const handleCloseOverflow = () => {
-            isActive.value = false;
-        };
-
-        return {
-            isActive,
-            handleCloseOverflow
-        };
-    }
+const handleCloseOverflow = () => {
+    emit('closeOverflow')
 }
 </script>
 
