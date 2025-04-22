@@ -4,7 +4,7 @@ import Donations from './components/Donations.vue'
 </script>
 
 <template>
-  <Home />
+  <Home :overflowStage="overflowStage"2 />
   <Donations :overflowStage="overflowStage" />
 </template>
 
