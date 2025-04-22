@@ -50,7 +50,7 @@ const handleCloseOverflow = () => {
 .overflow .frame {
     background: var(--secondary-color);
     width: 100%;
-    height: 100%;
+    height: auto;
     max-width: 300px;
     max-height: 400px;
     margin: 0 auto;
@@ -61,6 +61,12 @@ const handleCloseOverflow = () => {
     overflow: hidden;
     border: .2rem solid var(--primary-color);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
     transition: all .3s ease-in-out;
 }
 </style>
