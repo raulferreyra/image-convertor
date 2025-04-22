@@ -23,7 +23,7 @@ Este proyecto permite **convertir imágenes a formato WebP** y **comprimirlas au
 ## 🗂️ Estructura del proyecto
 
 ```
-project/****
+project/
 ├── backend/  ← Lógica de conversión de imágenes (convert.py)
 │ └── convert.py
 ├── frontend/ ← Interfaz web (Vue.js)
