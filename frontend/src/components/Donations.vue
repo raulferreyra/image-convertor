@@ -1,6 +1,7 @@
 <template>
     <div class="overflow">
         <div class="frame">
+            <div class="close-button">X</div>
             <div class="message">
                 <h2 class="title">Si te gusta mi herramienta</h2>
                 <h3 class="subtitle">por favor apóyame</h3>
