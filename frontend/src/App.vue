@@ -7,3 +7,11 @@ import Donations from './components/Donations.vue'
   <Home />
   <Donations :overflowStage="overflowStage" />
 </template>
+
+<script>
+export default {
+  components: {
+    Home,
+    Donations
+  },
+}</script>
