@@ -113,7 +113,7 @@
             </div>
             <div class="changes">
                 <div class="row-button">
-                    <input type="button" value="Donar" id="donation" name="donation">
+                    <input type="button" value="Donar" id="donation" name="donation" @click="handleOpenOverflow()">
                     <input type="button" value="Convertir" id="convert" name="convert">
                 </div>
             </div>
@@ -122,8 +122,30 @@
 </template>
 
 
-<script setup>
+<script>
+import { ref } from 'vue';
 import logo from '@/assets/logo.png';
+
+export default {
+    props: {
+        overflowStage: {
+            type: Boolean,
+            default: false
+        }
+    },
+    setup(props, { emit }) {
+        const isActive = ref(false);
+
+        const handleOpenOverflow = () => {
+            isActive.value = true;
+        };
+
+        return {
+            isActive,
+            handleOpenOverflow
+        };
+    }
+}
 </script>
 
 <style lang="css" scoped>
