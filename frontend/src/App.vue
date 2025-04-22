@@ -14,4 +14,10 @@ export default {
     Home,
     Donations
   },
-}</script>
+  data() {
+    return {
+      overflowStage: false
+    }
+  },
+}
+</script>
