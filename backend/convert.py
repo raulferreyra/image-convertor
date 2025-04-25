@@ -30,6 +30,19 @@ class ImageCompressor:
         quality = 100
         image = self._prepare_image(image)
 
+        # Agrega la extensión al nombre del archivo de salida
+        ext_map = {
+            'jpg': 'JPEG',
+            'jpeg': 'JPEG',
+            'png': 'PNG',
+            'gif': 'GIF',
+            'webp': 'WEBP',
+            'avif': 'AVIF'
+        }
+        format_upper = ext_map.get(
+            target_format.lower(), target_format.upper())
+        dest_path_with_ext = f"{dest_path}.{target_format.lower()}"
+
         while quality > 10:
             try:
                 image.save(dest_path, format="WEBP",
