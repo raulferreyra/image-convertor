@@ -15,13 +15,14 @@ class ImageCompressor:
         self.max_size = max_size
         self.step = step
 
-    def compress_to_webp(self, image: Image.Image, dest_path: str) -> bool:
+    def convert_format(self, image: Image.Image, dest_path: str, target_format: str) -> bool:
         """
         Guarda la imagen como WebP ajustando la calidad para no superar el tamaño máximo.
 
         Args:
             image (PIL.Image.Image): Imagen a comprimir.
             dest_path (str): Ruta de destino donde se guardará la imagen comprimida.
+            target_format (str): Formato al que se convertirá (por ejemplo: "WEBP", "JPG").
 
         Returns:
             bool: True si la imagen se guardó exitosamente por debajo del tamaño límite, False en caso contrario.
@@ -113,7 +114,7 @@ class ImageConverter:
 
         try:
             with Image.open(orig_path) as img:
-                if self.compressor.compress_to_webp(img, dest_path):
+                if self.compressor.convert_format(img, dest_path):
                     size_kb = os.path.getsize(dest_path) / 1024
                     print(
                         f"[OK] {orig_path} -> {dest_path} ({size_kb:.2f} KB)")
