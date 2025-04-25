@@ -1,4 +1,4 @@
-import os
+import os, sys
 from PIL import Image, UnidentifiedImageError
 
 
