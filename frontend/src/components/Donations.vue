@@ -135,8 +135,8 @@ const handleCloseOverflow = () => {
 }
 
 .overflow .frame a img {
-    width: 30px;
-    height: 30px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 5px;
     object-fit: contain;
 }
