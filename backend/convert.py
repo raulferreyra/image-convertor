@@ -43,21 +43,34 @@ class ImageCompressor:
             target_format.lower(), target_format.upper())
         dest_path_with_ext = f"{dest_path}.{target_format.lower()}"
 
-        while quality > 10:
+        if format_upper in ['JPEG', 'WEBP', 'AVIF']:
+            while quality > 10:
+                try:
+                    image.save(dest_path_with_ext, format=format_upper,
+                               quality=quality, lossless=False)
+                    if os.path.getsize(dest_path_with_ext) <= self.max_size:
+                        return True
+                except Exception as e:
+                    print(f"[ERROR] No se pudo guardar {dest_path}: {e}")
+                    return False
+
+                quality -= self.step
+
+            print(
+                f"[ADVERTENCIA] No se pudo comprimir {dest_path} por debajo de {self.max_size / 1024:.2f} KB")
+            return False
+        else:
             try:
-                image.save(dest_path, format="WEBP",
-                           quality=quality, lossless=False)
-                if os.path.getsize(dest_path) <= self.max_size:
+                image.save(dest_path_with_ext, format=format_upper)
+                if os.path.getsize(dest_path_with_ext) <= self.max_size:
                     return True
+                else:
+                    print(
+                        f"[ADVERTENCIA] {dest_path_with_ext} excede el tamaño máximo permitido.")
+                    return False
             except Exception as e:
-                print(f"[ERROR] No se pudo guardar {dest_path}: {e}")
+                print(f"[ERROR] No se pudo guardar {dest_path_with_ext}: {e}")
                 return False
-
-            quality -= self.step
-
-        print(
-            f"[ADVERTENCIA] No se pudo comprimir {dest_path} por debajo de {self.max_size / 1024:.2f} KB")
-        return False
 
     def _prepare_image(self, image: Image.Image) -> Image.Image:
         """
