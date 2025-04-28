@@ -1,8 +1,0 @@
-{
-  "devDependencies": {
-    "concurrently": "^9.1.2",
-    "electron": "^35.1.5",
-    "electron-builder": "^26.0.12",
-    "wait-on": "^8.0.3"
-  }
-}
