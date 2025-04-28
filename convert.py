@@ -1,4 +1,4 @@
-import os, sys
+import os
 from PIL import Image, UnidentifiedImageError
 
 
@@ -11,22 +11,17 @@ class ImageCompressor:
         step (int): Valor por el cual se reduce la calidad en cada intento.
     """
 
-    def __init__(self, max_weight_mb: float = 1.0, step: int = 5):
-        """
-        max_weight_mb: peso máximo en MB (por defecto 1MB si no se indica)
-        step: reducción por paso de calidad
-        """
-        self.max_size = max_weight_mb * 1024 * 1024  # Convertir MB a bytes
+    def __init__(self, max_size=1_048_576, step=5):
+        self.max_size = max_size
         self.step = step
 
-    def convert_format(self, image: Image.Image, dest_path: str, target_format: str) -> bool:
+    def compress_to_webp(self, image: Image.Image, dest_path: str) -> bool:
         """
         Guarda la imagen como WebP ajustando la calidad para no superar el tamaño máximo.
 
         Args:
             image (PIL.Image.Image): Imagen a comprimir.
             dest_path (str): Ruta de destino donde se guardará la imagen comprimida.
-            target_format (str): Formato al que se convertirá (por ejemplo: "WEBP", "JPG").
 
         Returns:
             bool: True si la imagen se guardó exitosamente por debajo del tamaño límite, False en caso contrario.
@@ -34,47 +29,21 @@ class ImageCompressor:
         quality = 100
         image = self._prepare_image(image)
 
-        # Agrega la extensión al nombre del archivo de salida
-        ext_map = {
-            'jpg': 'JPEG',
-            'jpeg': 'JPEG',
-            'png': 'PNG',
-            'gif': 'GIF',
-            'webp': 'WEBP',
-            'avif': 'AVIF'
-        }
-        format_upper = ext_map.get(
-            target_format.lower(), target_format.upper())
-        dest_path_with_ext = f"{dest_path}.{target_format.lower()}"
-
-        if format_upper in ['JPEG', 'WEBP', 'AVIF']:
-            while quality > 10:
-                try:
-                    image.save(dest_path_with_ext, format=format_upper,
-                               quality=quality, lossless=False)
-                    if os.path.getsize(dest_path_with_ext) <= self.max_size:
-                        return True
-                except Exception as e:
-                    print(f"[ERROR] No se pudo guardar {dest_path}: {e}")
-                    return False
-
-                quality -= self.step
-
-            print(
-                f"[ADVERTENCIA] No se pudo comprimir {dest_path} por debajo de {self.max_size / 1024:.2f} KB")
-            return False
-        else:
+        while quality > 10:
             try:
-                image.save(dest_path_with_ext, format=format_upper)
-                if os.path.getsize(dest_path_with_ext) <= self.max_size:
+                image.save(dest_path, format="WEBP",
+                           quality=quality, lossless=False)
+                if os.path.getsize(dest_path) <= self.max_size:
                     return True
-                else:
-                    print(
-                        f"[ADVERTENCIA] {dest_path_with_ext} excede el tamaño máximo permitido.")
-                    return False
             except Exception as e:
-                print(f"[ERROR] No se pudo guardar {dest_path_with_ext}: {e}")
+                print(f"[ERROR] No se pudo guardar {dest_path}: {e}")
                 return False
+
+            quality -= self.step
+
+        print(
+            f"[ADVERTENCIA] No se pudo comprimir {dest_path} por debajo de {self.max_size / 1024:.2f} KB")
+        return False
 
     def _prepare_image(self, image: Image.Image) -> Image.Image:
         """
@@ -144,7 +113,7 @@ class ImageConverter:
 
         try:
             with Image.open(orig_path) as img:
-                if self.compressor.convert_format(img, dest_path):
+                if self.compressor.compress_to_webp(img, dest_path):
                     size_kb = os.path.getsize(dest_path) / 1024
                     print(
                         f"[OK] {orig_path} -> {dest_path} ({size_kb:.2f} KB)")
