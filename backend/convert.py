@@ -156,6 +156,9 @@ class ImageConverter:
         except Exception as e:
             print(f"[ERROR] Falló el procesamiento de {orig_path}: {e}")
 
+    def set_resize(self, width: int, height: int):
+        self.resize = (width, height)
+
 
 if __name__ == "__main__":
     orig_folder = "orig"
