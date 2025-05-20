@@ -152,7 +152,7 @@ class ImageConverter:
 
         try:
             with Image.open(orig_path) as img:
-                if self.compressor.convert_format(img, dest_path):
+                if self.compressor.convert_format(img, dest_path, self.target_format):
                     if hasattr(self, 'resize'):
                         img = img.resize(self.resize, Image.ANTIALIAS)
 
