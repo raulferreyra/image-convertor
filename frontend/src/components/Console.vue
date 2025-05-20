@@ -1,7 +1,7 @@
 <template>
     <div class="console-window" :class="{ active: props.consoleWindow }">
         <div class="header">
-            <h1>Console</h1>
+            Procesando...
             <div class="close-button" @click="handleCloseConsole"></div>
         </div>
         <div class="content">
@@ -31,12 +31,29 @@ const handleCloseConsole = () => {
     font-size: 1.2rem;
 }
 
+.console-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 300px;
+    transform: translate(-50%, -50%);
+    border: 2px solid #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     color: #FFF;
+    font-family: Orgon-Bold, Arial, Helvetica, sans-serif;
     background-color: blue;
 }
 
@@ -44,6 +61,8 @@ const handleCloseConsole = () => {
     cursor: pointer;
     font-size: 1.5rem;
     background-color: #F00;
+    width: 20px;
+    height: 20px;
     transition: all .3s ease-in-out;
 }
 
@@ -51,9 +70,18 @@ const handleCloseConsole = () => {
     background-color: rgb(153, 2, 2);
 }
 
-header.close-button:before {
+.header .close-button:before {
+    width: 100%;
     content: 'X';
     color: #FFF;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-family: Orgon-Regular, Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: block;
+    line-height: 20px;
+}
+
+.content {
+    padding: 10px 20px;
 }
 </style>
