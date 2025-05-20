@@ -1,4 +1,5 @@
-import os, sys
+import os
+import sys
 from PIL import Image, UnidentifiedImageError
 
 
@@ -105,14 +106,16 @@ class ImageConverter:
         orig_folder (str): Carpeta de origen con imágenes.
         dest_folder (str): Carpeta de destino para guardar las imágenes comprimidas.
         compressor (ImageCompressor): Instancia de la clase ImageCompressor.
+        format (str): Formato de destino (por defecto "webp").
     """
 
     VALID_EXTENSIONS = ('.png', '.jpg', '.jpeg', '.gif')
 
-    def __init__(self, orig_folder: str, dest_folder: str, compressor: ImageCompressor):
+    def __init__(self, orig_folder: str, dest_folder: str, compressor: ImageCompressor, format: str = "webp"):
         self.orig_folder = orig_folder
         self.dest_folder = dest_folder
         self.compressor = compressor
+        self.target_format = format.lower()
 
     def convert_all(self):
         """
@@ -139,7 +142,7 @@ class ImageConverter:
         dest_subfolder = os.path.join(self.dest_folder, relative_path)
         os.makedirs(dest_subfolder, exist_ok=True)
 
-        dest_file = os.path.splitext(file)[0] + ".webp"
+        dest_file = os.path.splitext(file)[0] + f".{self.target_format}"
         dest_path = os.path.join(dest_subfolder, dest_file)
 
         try:
