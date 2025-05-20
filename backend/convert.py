@@ -46,6 +46,11 @@ class ImageCompressor:
         }
         format_upper = ext_map.get(
             target_format.lower(), target_format.upper())
+
+        if format_upper not in ext_map.values():
+            print(f"[ERROR] Formato de destino no soportado: {target_format}")
+            return False
+
         dest_path_with_ext = f"{dest_path}.{target_format.lower()}"
 
         if format_upper in ['JPEG', 'WEBP', 'AVIF']:
@@ -148,6 +153,9 @@ class ImageConverter:
         try:
             with Image.open(orig_path) as img:
                 if self.compressor.convert_format(img, dest_path):
+                    if hasattr(self, 'resize'):
+                        img = img.resize(self.resize, Image.ANTIALIAS)
+
                     size_kb = os.path.getsize(dest_path) / 1024
                     print(
                         f"[OK] {orig_path} -> {dest_path} ({size_kb:.2f} KB)")
