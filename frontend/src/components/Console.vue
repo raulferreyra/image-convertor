@@ -2,7 +2,7 @@
     <div class="console-window" :class="{ active: props.consoleWindow }">
         <div class="header">
             <h1>Console</h1>
-            <div class="close-button" @click="handleCloseOverflow"></div>
+            <div class="close-button" @click="handleCloseConsole"></div>
         </div>
         <div class="content">
             <p>Console output will be displayed here.</p>
@@ -16,10 +16,10 @@ const props = defineProps({
     consoleWindow: Boolean
 })
 
-const emit = defineEmits(['closeOverflow'])
+const emit = defineEmits(['closeConsole'])
 
-const handleCloseOverflow = () => {
-    emit('closeOverflow')
+const handleCloseConsole = () => {
+    emit('closeConsole')
 }
 </script>
 
