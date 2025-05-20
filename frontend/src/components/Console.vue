@@ -5,13 +5,14 @@
             <div class="close-button" @click="handleCloseConsole"></div>
         </div>
         <div class="content">
-            <p>Console output will be displayed here.</p>
-            <p>Press Ctrl+C to exit.</p>
+            <p v-for="(line, index) in visibleLines" :key="index">{{ line }}</p>
         </div>
     </div>
 </template>
 
 <script setup>
+import { ref, watch } from 'vue'
+
 const props = defineProps({
     consoleWindow: Boolean
 })
@@ -21,6 +22,41 @@ const emit = defineEmits(['closeConsole'])
 const handleCloseConsole = () => {
     emit('closeConsole')
 }
+
+const consoleLines = [
+    'Iniciando proceso...',
+    'Leyendo archivos...',
+    'Procesando archivo 1...',
+    'Archivo 1 procesado con éxito.',
+    'Procesando archivo 2...',
+    'Archivo 2 procesado con éxito.',
+    'Finalizando...',
+    '✔ Proceso completado.'
+]
+
+const visibleLines = ref([])
+let lineIndex = 0
+let intervalId = null
+
+const startConsoleOutput = () => {
+    visibleLines.value = []
+    lineIndex = 0
+    if (intervalId) clearInterval(intervalId)
+    intervalId = setInterval(() => {
+        if (lineIndex < consoleLines.length) {
+            visibleLines.value.push(consoleLines[lineIndex])
+            lineIndex++
+        } else {
+            clearInterval(intervalId)
+        }
+    }, 500)
+}
+
+watch(() => props.consoleWindow, (newVal) => {
+    if (newVal) {
+        startConsoleOutput()
+    }
+})
 </script>
 
 <style lang="css" scoped>
