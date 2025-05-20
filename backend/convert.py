@@ -1,4 +1,4 @@
-import os
+import os, sys
 from PIL import Image, UnidentifiedImageError
 
 
@@ -11,8 +11,12 @@ class ImageCompressor:
         step (int): Valor por el cual se reduce la calidad en cada intento.
     """
 
-    def __init__(self, max_size=1_048_576, step=5):
-        self.max_size = max_size
+    def __init__(self, max_weight_mb: float = 1.0, step: int = 5):
+        """
+        max_weight_mb: peso máximo en MB (por defecto 1MB si no se indica)
+        step: reducción por paso de calidad
+        """
+        self.max_size = max_weight_mb * 1024 * 1024  # Convertir MB a bytes
         self.step = step
 
     def convert_format(self, image: Image.Image, dest_path: str, target_format: str) -> bool:
